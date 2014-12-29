@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# List Packages that will be installed
+node_modules=(
+  bower
+  coffee-script
+  express
+  grunt-cli
+  jshint
+  karma-cli
+  less
+  strongloop
+  mean-cli
+  mongoose
+  nodemon
+  shelljs
+)
+
+# Install Node Packages
+npm install -g  ${node_modules[@]}

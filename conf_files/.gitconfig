@@ -1,0 +1,135 @@
+[user]
+
+    name = YOUR_NAME
+    email = YOUR_EMAIL
+    editor = YOUR_EDITOR
+
+[alias]
+
+    # Add
+    ad = add
+    aa = add .
+
+    # Commit
+    cm = commit -m
+    ca = commit --amend -m
+
+    # Checkout
+    co = checkout
+    cb = checkout -b
+
+    # Cherry-pick
+    cp = cherry-pick
+
+    # Diff
+    df = diff
+
+    # List
+    tl = tag -l
+    bl = branch -a
+    rl = remote -v
+
+    # Status
+    st = status -s
+
+    # Pull
+    pl   = pull
+    plo  = pull --rebase origin
+    plom = pull --rebase origin master
+    plog = pull --rebase origin gh-pages
+    plu  = pull --rebase upstream
+    plum = pull --rebase upstream master
+    plug = pull --rebase upstream gh-pages
+
+    # Push
+    ps   = push
+    pso  = push origin
+    psom = push origin master
+    psog = push origin gh-pages
+    psu  = push upstream
+    psum = push upstream master
+    psug = push upstream gh-pages
+
+    # Remote
+    ra  = remote add
+    rao = remote add origin
+    rau = remote add upstream
+    rs  = remote set-url
+    rso = remote set-url origin
+    rsu = remote set-url upstream
+
+    # Logs
+    l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+    ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+    # Sync
+    sync = plu && pso
+
+[color]
+
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
+
+[color "branch"]
+
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[diff]
+
+	# Detect copies as well as renames
+	renames = copies
+
+[help]
+
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+
+[merge]
+
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
+[push]
+
+	# Use the Git 1.x.x default to avoid errors on machines with old Git
+	# installations. To use `simple` instead, add this to your `~/.extra` file:
+	# `git config --global push.default simple`. See http://git.io/mMah-w.
+	default = matching
+
+# URL shorthands
+
+[url "git@github.com:"]
+
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+	insteadOf = "gist:"
